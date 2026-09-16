@@ -1,0 +1,16 @@
+[
+  {"id":"236-park-sangwoo","session":236,"date":"2025-06-11","year":2025,"category":"초청패널","name":"박상우","role":"시브아 29기 · 직업학 박사","topic":"상대의 마음을 지배하는 방법","event":"236회 지식나눔 시브아포럼","image":"/assets/images/archive/archive-236-parksangwoo.webp"},
+  {"id":"236-jang-hyoseong","session":236,"date":"2025-06-11","year":2025,"category":"초청패널","name":"장효성","role":"시브아 29기 · 공학박사","topic":"블로그 왜 해야하나","event":"236회 지식나눔 시브아포럼","image":"/assets/images/archive/archive-236-janghyoseong.webp"},
+  {"id":"235-kim-shinmuk","session":235,"date":"2025-05-21","year":2025,"category":"초청패널","name":"김신묵","role":"내나라문화유산답사 회장","topic":"진시황과 초한전","event":"235회 시브아포럼","image":"/assets/images/archive/archive-235-kimshinmuk.webp"},
+  {"id":"235-ju-seongae","session":235,"date":"2025-05-21","year":2025,"category":"초청공연","name":"주성애","role":"지식나눔문화원 원장 · 시인 · 낭송가","topic":"시와 낭송","event":"235회 시브아포럼","image":"/assets/images/archive/archive-235-juseongae.webp"},
+  {"id":"233-lee-bogyu","session":233,"date":"2025-05-07","year":2025,"category":"초청패널","name":"이보규","role":"교수 · 작가 · 이보규TV","topic":"의미있는 삶을 위한 위니벨","event":"233회 시브아포럼","image":"/assets/images/archive/archive-233-leebogyu.webp"},
+  {"id":"233-kim-inshik","session":233,"date":"2025-05-07","year":2025,"category":"초청패널","name":"김인식","role":"교수 · 황금입술 · 밥포럼","topic":"선물같은 하루 만들기","event":"233회 시브아포럼","image":"/assets/images/archive/archive-233-kiminshik.webp"},
+  {"id":"233-lee-eunjin","session":233,"date":"2025-05-07","year":2025,"category":"초청공연","name":"이은진","role":"첼리스트 · 심리학자 · 전 서울앙상블 수석","topic":"첼로 연주","event":"233회 시브아포럼","image":"/assets/images/archive/archive-233-leeeunjin.webp"},
+  {"id":"record-kim-gyeongsuk","session":null,"date":"","year":null,"category":"초청공연","name":"김경숙","role":"대금 · 팬플룻 연주자","topic":"대금·팬플룻 연주","event":"토크살롱 초청 기록","image":"/assets/images/archive/archive-kimgyeongsuk.webp"},
+  {"id":"record-kim-cheong","session":null,"date":"","year":null,"category":"초청패널","name":"김청","role":"마술사","topic":"마술은 사랑이다","event":"토크살롱 초청 기록","image":"/assets/images/archive/archive-kimcheong.webp"},
+  {"id":"record-seo-dongil","session":null,"date":"","year":null,"category":"초청패널","name":"서동일","role":"성악가","topic":"성악, 발성과 나의 인생","event":"토크살롱 초청 기록","image":"/assets/images/archive/archive-seodongil.webp"},
+  {"id":"record-lee-jeongmin","session":null,"date":"","year":null,"category":"초청공연","name":"이정민","role":"교수 · 첼리스트","topic":"첼로 연주","event":"토크살롱 초청 기록","image":"/assets/images/archive/archive-leejeongmin.webp"},
+  {"id":"record-pops-orchestra","session":null,"date":"","year":null,"category":"초청공연","name":"POPS ORCHESTRA","role":"장수환 단장 · 지휘자","topic":"오케스트라 악기연주","event":"토크살롱 초청 기록","image":"/assets/images/archive/archive-pops-orchestra.webp"},
+  {"id":"record-oh-jeonghwan","session":null,"date":"","year":null,"category":"초청패널","name":"오정환","role":"초청패널","topic":"어둠의 자식 그리고 음지의 삶","event":"토크살롱 초청 기록","image":"/assets/images/archive/archive-ojeonghwan.webp"},
+  {"id":"record-kang-shinyoung","session":null,"date":"","year":null,"category":"초청패널","name":"강신영","role":"회장","topic":"인생 이야기","event":"지식나눔문화원 초청 기록","image":"/assets/images/archive/archive-kangshinyoung.webp"}
+]
