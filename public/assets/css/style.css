@@ -56,6 +56,15 @@ h1{font-size:clamp(44px,6vw,78px);line-height:1.08;margin:15px 0 22px;letter-spa
 .two-col{display:grid;grid-template-columns:280px 1fr;gap:50px}.side-nav{position:sticky;top:110px;align-self:start;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.side-nav a{display:block;padding:15px 18px;border-bottom:1px solid var(--line);font-weight:700}.side-nav a:last-child{border-bottom:0}.side-nav a.active,.side-nav a:hover{background:var(--navy);color:var(--gold-2)}
 .content h2{font-size:36px;margin:0 0 18px}.content h3{font-size:24px;margin-top:36px}.content p{color:#46525d}.quote{border-left:4px solid var(--gold);background:var(--ivory);padding:26px 28px;border-radius:0 18px 18px 0;font-size:19px}
 .timeline{display:grid;gap:18px}.timeline-item{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:22px;border:1px solid var(--line);border-radius:16px}.timeline-item b{color:var(--gold)}
+
+.feature-media img{
+  width: 85%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
 .form{display:grid;gap:16px}.form label{font-weight:800}.form input,.form textarea,.form select{width:100%;padding:14px 16px;border:1px solid #d9dde1;border-radius:12px;font:inherit}.form textarea{min-height:160px;resize:vertical}.notice{padding:18px;border-radius:14px;background:#fff6dd;border:1px solid #f1d28b;color:#755718}
 .shop-placeholder{display:grid;place-items:center;min-height:420px;text-align:center;border:1px dashed #cfd5da;border-radius:24px;background:#fafbfc}.shop-placeholder h2{font-size:36px;margin-bottom:8px}
 @media(max-width:900px){.nav-links{display:none;position:absolute;left:0;right:0;top:78px;background:var(--navy);padding:22px 20px;flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.nav-actions{display:none}.mobile-toggle{display:block}.hero{min-height:auto;padding:90px 0}.hero-grid,.feature-grid,.two-col,.banner{grid-template-columns:1fr}.hero-card{order:-1}.grid-4{grid-template-columns:repeat(2,1fr)}.posts{grid-template-columns:1fr 1fr}.side-nav{position:static}.banner{padding:34px}.section{padding:72px 0}.section-head{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}}
