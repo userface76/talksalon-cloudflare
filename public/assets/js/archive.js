@@ -1,0 +1,18 @@
+const archiveRoot=document.getElementById('archive-root');
+const archiveSearch=document.getElementById('archive-search');
+const archiveFilters=[...document.querySelectorAll('.archive-filter')];
+const archiveModal=document.getElementById('archive-modal');
+let archiveItems=[];
+let activeCategory='전체';
+function formatDate(value){if(!value)return '기록 보관';const [y,m,d]=value.split('-');return `${y}.${m}.${d}`;}
+function groupLabel(item){return item.session?`${item.session}회 시브아포럼`:'토크살롱 이전 기록';}
+function groupKey(item){return item.session?String(item.session):'record';}
+function renderArchive(){if(!archiveRoot)return;const q=(archiveSearch?.value||'').trim().toLowerCase();const filtered=archiveItems.filter(item=>{const categoryOk=activeCategory==='전체'||item.category===activeCategory;const hay=[item.name,item.role,item.topic,item.event,item.session].join(' ').toLowerCase();return categoryOk&&(!q||hay.includes(q));});if(!filtered.length){archiveRoot.innerHTML='<div class="archive-empty">조건에 맞는 기록이 없습니다.</div>';return;}const groups=[];const seen=new Set();filtered.forEach(item=>{const key=groupKey(item);if(!seen.has(key)){seen.add(key);groups.push({key,label:groupLabel(item),items:[]});}groups.find(g=>g.key===key).items.push(item);});archiveRoot.innerHTML=groups.map(group=>`<section class="archive-group"><div class="archive-group-head"><h2>${group.label}</h2><span>${group.items.length}개의 기록</span></div><div class="archive-grid">${group.items.map(item=>`<article class="archive-card"><div class="archive-media"><img src="${item.image}" alt="${item.name} ${item.topic}" loading="lazy"></div><div class="archive-body"><div class="archive-meta"><span class="archive-badge">${item.category}</span><span class="archive-date">${formatDate(item.date)}</span></div><h3>${item.name}</h3><div class="archive-role">${item.role||''}</div><p class="archive-topic">${item.topic}</p><button class="archive-view" data-archive-id="${item.id}">기록 보기 →</button></div></article>`).join('')}</div></section>`).join('');}
+function openArchive(id){const item=archiveItems.find(x=>x.id===id);if(!item||!archiveModal)return;archiveModal.querySelector('[data-modal-image]').src=item.image;archiveModal.querySelector('[data-modal-image]').alt=`${item.name} ${item.topic}`;archiveModal.querySelector('[data-modal-category]').textContent=item.category;archiveModal.querySelector('[data-modal-name]').textContent=item.name;archiveModal.querySelector('[data-modal-role]').textContent=item.role||'';archiveModal.querySelector('[data-modal-topic]').textContent=item.topic;archiveModal.querySelector('[data-modal-event]').textContent=item.event||'';archiveModal.querySelector('[data-modal-date]').textContent=formatDate(item.date);archiveModal.classList.add('open');document.body.style.overflow='hidden';}
+function closeArchive(){if(!archiveModal)return;archiveModal.classList.remove('open');document.body.style.overflow='';}
+archiveFilters.forEach(btn=>btn.addEventListener('click',()=>{archiveFilters.forEach(x=>x.classList.remove('active'));btn.classList.add('active');activeCategory=btn.dataset.category;renderArchive();}));
+archiveSearch?.addEventListener('input',renderArchive);
+archiveRoot?.addEventListener('click',e=>{const btn=e.target.closest('[data-archive-id]');if(btn)openArchive(btn.dataset.archiveId);});
+archiveModal?.addEventListener('click',e=>{if(e.target===archiveModal||e.target.closest('[data-modal-close]'))closeArchive();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeArchive();});
+fetch('/data/archive.json').then(r=>r.json()).then(items=>{archiveItems=items;renderArchive();}).catch(()=>{if(archiveRoot)archiveRoot.innerHTML='<div class="archive-empty">아카이브를 불러오지 못했습니다.</div>';});
